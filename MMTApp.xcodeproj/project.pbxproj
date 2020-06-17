@@ -15,6 +15,9 @@
 		D8817B2F2499E87D005D9762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8817B2D2499E87D005D9762 /* LaunchScreen.storyboard */; };
 		D8817B3A2499E87D005D9762 /* MMTAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8817B392499E87D005D9762 /* MMTAppTests.swift */; };
 		D8817B452499E87D005D9762 /* MMTAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8817B442499E87D005D9762 /* MMTAppUITests.swift */; };
+		D8817B562499E956005D9762 /* libMMTApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8817B542499E955005D9762 /* libMMTApp.a */; };
+		D8817B5C2499EB61005D9762 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8817B5B2499EB61005D9762 /* CoreData.framework */; };
+		D8817B5E2499EB6C005D9762 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8817B5D2499EB6C005D9762 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,15 @@
 		D8817B402499E87D005D9762 /* MMTAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMTAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8817B442499E87D005D9762 /* MMTAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MMTAppUITests.swift; sourceTree = "<group>"; };
 		D8817B462499E87D005D9762 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8817B542499E955005D9762 /* libMMTApp.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libMMTApp.a; path = Framework/libMMTApp.a; sourceTree = SOURCE_ROOT; };
+		D8817B572499E993005D9762 /* MMTApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MMTApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		D8817B5B2499EB61005D9762 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D8817B5D2499EB6C005D9762 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D8817B5F2499EDCF005D9762 /* MMTApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTApi.h; path = Framework/MMTApi.h; sourceTree = SOURCE_ROOT; };
+		D8817B602499EDCF005D9762 /* MMTExperiences.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTExperiences.h; path = Framework/MMTExperiences.h; sourceTree = SOURCE_ROOT; };
+		D8817B612499EDCF005D9762 /* MMTApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTApp.h; path = Framework/MMTApp.h; sourceTree = SOURCE_ROOT; };
+		D8817B622499EDCF005D9762 /* MMTLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MMTLogger.h; path = Framework/MMTLogger.h; sourceTree = SOURCE_ROOT; };
+		D8817B632499EDCF005D9762 /* UIView+MMTApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+MMTApp.h"; path = "Framework/UIView+MMTApp.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8817B562499E956005D9762 /* libMMTApp.a in Frameworks */,
+				D8817B5E2499EB6C005D9762 /* SystemConfiguration.framework in Frameworks */,
+				D8817B5C2499EB61005D9762 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +98,8 @@
 				D8817B382499E87D005D9762 /* MMTAppTests */,
 				D8817B432499E87D005D9762 /* MMTAppUITests */,
 				D8817B202499E87B005D9762 /* Products */,
+				D8817B572499E993005D9762 /* MMTApp-Bridging-Header.h */,
+				D8817B5A2499EB61005D9762 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +116,7 @@
 		D8817B212499E87B005D9762 /* MMTApp */ = {
 			isa = PBXGroup;
 			children = (
+				D8817B522499E8D4005D9762 /* Framework */,
 				D8817B222499E87B005D9762 /* AppDelegate.swift */,
 				D8817B242499E87B005D9762 /* SceneDelegate.swift */,
 				D8817B262499E87B005D9762 /* ViewController.swift */,
@@ -126,6 +144,28 @@
 				D8817B462499E87D005D9762 /* Info.plist */,
 			);
 			path = MMTAppUITests;
+			sourceTree = "<group>";
+		};
+		D8817B522499E8D4005D9762 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				D8817B5F2499EDCF005D9762 /* MMTApi.h */,
+				D8817B612499EDCF005D9762 /* MMTApp.h */,
+				D8817B602499EDCF005D9762 /* MMTExperiences.h */,
+				D8817B622499EDCF005D9762 /* MMTLogger.h */,
+				D8817B632499EDCF005D9762 /* UIView+MMTApp.h */,
+				D8817B542499E955005D9762 /* libMMTApp.a */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		D8817B5A2499EB61005D9762 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8817B5D2499EB6C005D9762 /* SystemConfiguration.framework */,
+				D8817B5B2499EB61005D9762 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +236,7 @@
 				TargetAttributes = {
 					D8817B1E2499E87B005D9762 = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 					D8817B342499E87D005D9762 = {
 						CreatedOnToolsVersion = 11.5;
@@ -434,6 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSLYU8VQKZ;
 				INFOPLIST_FILE = MMTApp/Info.plist;
@@ -441,8 +483,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MMTApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMTApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -452,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XSLYU8VQKZ;
 				INFOPLIST_FILE = MMTApp/Info.plist;
@@ -459,8 +509,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
+				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.MMTApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MMTApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
